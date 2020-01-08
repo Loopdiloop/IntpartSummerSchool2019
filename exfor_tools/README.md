@@ -11,10 +11,7 @@ You can now easily read this data, see `extract.py` script.
 Read the data to a `pd.Dataframe`
 
 ``` py
-names = ["x", "dx", "y", "dy", "#1",
-         "year, auth", "#2", "id", "com"]
-data = pd.read_fwf("X4_exp.txt", skiprows=11, skipfooter=2, names=names)
-data.drop(columns=["#1", "#2"])
+data = read_exfor("X4_exp.txt")
 ```
 
 Now you can treat the data however you want. Eg. you plot each dataset on a common figure. In addition,
